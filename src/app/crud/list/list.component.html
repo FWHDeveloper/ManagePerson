@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <body>
+            <div>
+                <h1>Persons</h1>
+                <button type="button" [routerLink]="/crud/list/">List of all persons by name</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Person Name</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let person of persons">
+                            <td>{{person.id}}</td>
+                            <td>{{person.fname}}</td>
+                           
+                            <td>
+                                <button type="button" [routerLink]="['/crud/details/', person.id]">Show details</button>
+                                <button type="button" (click)="crudService.edit(person.id)">Edit</button>
+                                <button type="button" (click)="crudService.delete(person.id)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </body>
+    </head>
