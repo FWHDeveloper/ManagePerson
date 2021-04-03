@@ -1,1 +1,21 @@
-<p>details works!</p>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Alter info</h3>
+    </div>
+    <div class="card-body">
+    <img width="130" alt="Angular Logo" src="./assets/personal_information.svg">
+      <form action="">
+    
+        <div class="form-group">
+          <label for="">First name:</label>
+          <input [(ngModel)]="person.firstName" name="firstName" type="text" class="form-control">
+          <label for="">Last name:</label>
+          <input [(ngModel)]="person.lastName" name="lastName" type="text" class="form-control">
+            <label for="">Email Adress:</label>
+          <input [(ngModel)]="person.emailAddress" name="emailAddress" type="text" class="form-control">
+        </div>
+        </form>
+    </div>
+  </div>
+</div>
